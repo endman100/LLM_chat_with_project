@@ -24,8 +24,8 @@ ChatWithProject 是一個基於 AI 的程式碼分析工具，透過 XAI 的 Gro
 1. **複製專案**：
 
    ```bash
-   git clone https://github.com/your-repo/CodeAnalyzer.git
-   cd CodeAnalyzer
+   git clone https://github.com/endman100/LLM_chat_with_project.git
+   cd LLM_chat_with_project
    ```
 
 2. **安裝依賴套件**：
@@ -47,13 +47,13 @@ ChatWithProject 是一個基於 AI 的程式碼分析工具，透過 XAI 的 Gro
 1. **運行程式**： 在命令提示字元（CMD）或終端機中，執行以下命令：
 
    ```bash
-   python code_analyzer.py 您的專案目錄路徑
+   python main.py 您的專案目錄路徑
    ```
 
    範例：
 
    ```bash
-   python code_analyzer.py D:\Projects\MyProject
+   python main.py D:\Projects\MyProject
    ```
 
 2. **輸入問題**： 程式會提示您輸入問題，例如：
