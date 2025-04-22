@@ -2,6 +2,7 @@ import os
 from openai import OpenAI
 from pydantic import BaseModel
 from typing import List, Dict
+import argparse
 
 # 設置 OpenAI API 客戶端
 xai_api_key = os.getenv("XAI_API_KEY")
@@ -164,6 +165,13 @@ def main(project_dir):
         print("沒有可用的檔案內容來生成回答。")
 
 if __name__ == "__main__":
+    # 使用 argparse 解析命令行參數
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--project_dir", type=str, help="專案目錄路徑")
+    args = parser.parse_args()
+    print(f"目標分析專案目錄路徑：{args.project_dir}")
+
     # 專案目錄路徑
-    project_dir = r'D:\AIGC\AICGCode\AICGCode\SymbolCopy'
+    # project_dir = r'D:\AIGC\AICGCode\AICGCode\SymbolCopy'
+    project_dir = args.project_dir
     main(project_dir)
