@@ -53,13 +53,13 @@ ChatWithProject 是一個基於 AI 的程式碼分析工具，透過 XAI 的 Gro
    範例：
 
    ```bash
-   python main.py D:\Projects\MyProject
+   python main.py --project_dir="D:\Projects\MyProject"
    ```
 
 2. **輸入問題**： 程式會提示您輸入問題，例如：
 
    ```
-   請輸入您的問題：這個專案的主程式入口rekli
+   請輸入您的問題：這個專案的主程式入口
    ```
 
 3. **查看結果**： 程式會掃描專案結構、推測相關檔案、讀取內容並生成回答。輸出範例：
@@ -76,15 +76,13 @@ ChatWithProject 是一個基於 AI 的程式碼分析工具，透過 XAI 的 Gro
 ## 檔案結構
 
 ```
-CodeAnalyzer/
-├── code_analyzer.py  # 主程式檔案
-├── README.md         # 本說明檔案
-└── requirements.txt  # 依賴套件清單
+LLM_chat_with_project/
+├── main.py  # 主程式檔案
+└── README.md         # 本說明檔案
 ```
 
 ## 注意事項
 
 - **API 金鑰**：確保正確設置 `XAI_API_KEY`，否則無法連接到 XAI API。
 - **檔案編碼**：程式假設檔案為 UTF-8 編碼，若遇到非 UTF-8 檔案，可能無法正確讀取。
-- **檔案數量限制**：每次推測最多請求 10 個檔案，防止過多檔案處理。
 - **支援的檔案類型**：目前僅支援 `.py`, `.js`, `.java`, `.cpp`, `.h`, `.cs`, `.go`, `.rb` 檔案。如需支援其他檔案類型，請修改 `get_project_structure` 函數。
